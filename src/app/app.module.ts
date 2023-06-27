@@ -9,6 +9,7 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxWebstorageModule } from 'ngx-webstorage';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    NgxWebstorageModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
