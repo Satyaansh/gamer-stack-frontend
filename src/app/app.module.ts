@@ -19,6 +19,8 @@ import { PostTitleComponent } from './shared/post-title/post-title.component';
 import { SideBarComponent } from './shared/side-bar/side-bar.component';
 import { GameSideBarComponent } from './shared/game-side-bar/game-side-bar.component';
 import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
+import { CreateGameComponent } from './game/create-game/create-game.component';
+import { CreatePostComponent } from './post/create-post/create-post.component';
 
 
 
@@ -30,7 +32,9 @@ import { VoteButtonComponent } from './shared/vote-button/vote-button.component'
     PostTitleComponent,
     SideBarComponent,
     GameSideBarComponent,
-    VoteButtonComponent
+    VoteButtonComponent,
+    CreateGameComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
