@@ -12,7 +12,7 @@ export class GameSideBarComponent implements OnInit{
   displayViewAll: boolean;
 
   constructor(private gameService: GameService) {
-    this.gameService.getAllSubreddits().subscribe(data => {
+    this.gameService.getAllGames().subscribe(data => {
       if (data.length > 3) {
         this.games = data.splice(0, 3);
         this.displayViewAll = true;

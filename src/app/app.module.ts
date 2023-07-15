@@ -21,7 +21,8 @@ import { GameSideBarComponent } from './shared/game-side-bar/game-side-bar.compo
 import { VoteButtonComponent } from './shared/vote-button/vote-button.component';
 import { CreateGameComponent } from './game/create-game/create-game.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
-
+import { ListGamesComponent } from './game/list-games/list-games.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CreatePostComponent } from './post/create-post/create-post.component';
     GameSideBarComponent,
     VoteButtonComponent,
     CreateGameComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    ListGamesComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { CreatePostComponent } from './post/create-post/create-post.component';
     NgxWebstorageModule.forRoot(),
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    EditorModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

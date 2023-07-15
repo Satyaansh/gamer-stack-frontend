@@ -11,8 +11,13 @@ export class GameService {
 
   constructor(private http: HttpClient) { }
 
-  getAllSubreddits(): Observable<Array<GameModel>> {
+  getAllGames(): Observable<Array<GameModel>> {
     return this.http.get<Array<GameModel>>('http://localhost:8080/api/subreddit/');
+  }
+
+  createGame(gameModel: GameModel): Observable<GameModel> {
+    return this.http.post<GameModel>('http://localhost:8080/api/subreddit',
+      gameModel);
   }
 
 }
