@@ -8,9 +8,7 @@ import { CreatePostPayload } from '../post/create-post/create-post-payload';
   providedIn: 'root'
 })
 export class PostService {
-  createGame(postPayload: CreatePostPayload) {
-    throw new Error('Method not implemented.');
-  }
+  
   createPost(postPayload: CreatePostPayload) {
     return this.http.post('http://localhost:8080/api/posts/', postPayload);
   }
@@ -19,5 +17,9 @@ export class PostService {
 
   getAllPosts(): Observable<Array<PostModel>> {
     return this.http.get<Array<PostModel>>('http://localhost:8080/api/posts');
+  }
+
+  getPost(id: number): Observable<PostModel> {
+    return this.http.get<PostModel>('http://localhost:8080/api/posts/' + id);
   }
 }
