@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PostModel } from '../post-model';
 import { faComments } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-post-title',
@@ -13,7 +14,11 @@ export class PostTitleComponent implements OnInit {
   @Input() posts$: Array<PostModel>
   faComments = faComments;
 
-  constructor(private router: Router) { }
+  constructor(private postService: PostService,private router: Router) {
+    this.postService.getAllPosts().subscribe(post => {
+      this.posts$ = post;
+    })
+  }
   
   ngOnInit(): void {
       
