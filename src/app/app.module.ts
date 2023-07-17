@@ -23,6 +23,7 @@ import { CreateGameComponent } from './game/create-game/create-game.component';
 import { CreatePostComponent } from './post/create-post/create-post.component';
 import { ListGamesComponent } from './game/list-games/list-games.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
+import { ViewPostComponent } from './post/view-post/view-post.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { EditorModule } from '@tinymce/tinymce-angular';
     VoteButtonComponent,
     CreateGameComponent,
     CreatePostComponent,
-    ListGamesComponent
+    ListGamesComponent,
+    ViewPostComponent
   ],
   imports: [
     BrowserModule,
